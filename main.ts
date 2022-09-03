@@ -124,53 +124,71 @@ scene.setBackgroundImage(img`
     dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
     `)
 let mySprite = sprites.create(img`
-    . . . . . . f f f . . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    . . . . . f f f f f . . . . . . 
-    f f f f f f f f f f f f f f f f 
-    f f f f f f f f f f f f f f f f 
-    f f f f f f f f f f f f f f f f 
-    . . . . . f f f f f . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    . . . . . . f f f . . . . . . . 
-    `, SpriteKind.Player)
+    . . . . . . . . . . . . . . . . 
+    . . . . . . f . . . . . . . . . 
+    . . . . . . f f . . . . . . . . 
+    . . . . . . 3 3 f . . . . . . . 
+    . . . . . 3 3 3 3 3 . . . . . . 
+    . . . . 3 f f f f f 3 . . . . . 
+    . . . f 3 f f f f f 3 3 f f . . 
+    . . f 3 3 f f 6 f f 3 3 f . . . 
+    . f f 3 3 f f f f f 3 f . . . . 
+    . . . . 3 f f f f f 3 . . . . . 
+    . . . . . 3 3 3 3 3 . . . . . . 
+    . . . . . . f 3 3 . . . . . . . 
+    . . . . . . . f f . . . . . . . 
+    . . . . . . . . f . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Enemy)
 let mySprite2 = sprites.create(img`
-    . 9 9 9 9 9 9 c c 9 9 9 9 9 9 . 
-    9 . 9 9 9 9 9 c c 9 9 9 9 9 . 9 
-    9 9 . 9 9 9 9 c c 9 9 9 9 . 9 9 
-    9 9 9 . 9 9 9 c c 9 9 9 . 9 9 9 
-    9 9 9 9 . 9 9 c c 9 9 . 9 9 9 9 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
     9 9 9 9 9 . 9 c c 9 . 9 9 9 9 9 
     9 9 9 9 9 9 . c c . 9 9 9 9 9 9 
     c c c c c c c . . c c c c c c c 
     c c c c c c c . . c c c c c c c 
     9 9 9 9 9 9 . c c . 9 9 9 9 9 9 
     9 9 9 9 9 . 9 c c 9 . 9 9 9 9 9 
-    9 9 9 9 . 9 9 c c 9 9 . . 9 9 9 
-    9 9 9 . 9 9 9 c c 9 9 9 . . 9 9 
-    9 9 . 9 9 9 9 c c 9 9 9 9 . . 9 
-    9 . 9 9 9 9 9 c c 9 9 9 9 9 . . 
-    . 9 9 9 9 9 9 c c 9 9 9 9 9 9 . 
-    `, SpriteKind.Player)
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Enemy)
 let mySprite3 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    . . . . . e e e e e . . . . . . 
+    . . . . . 9 e 9 e 9 . . . . . . 
     . . . . e e e e e e e . . . . . 
-    . . . . e . e . e . e . . . . . 
-    . . . . e . . . . . e . . . . . 
-    . . . . e e e e e . e . . . . . 
-    . . . . e . . . . . e . . . . . 
-    . . . . e e e e e e e . . . . . 
-    . . . . . e e e e e . . . . . . 
+    . . . d e 2 e 2 e 2 e d . . . . 
+    . . d d e 2 2 2 2 2 e d d . . . 
+    e e e e e e e e e e e e e e e e 
+    . d d d 6 6 6 6 6 6 6 d d d d . 
+    . . . d 4 4 4 4 4 4 4 d . . . . 
+    . . . . d 9 9 9 9 9 d . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Enemy)
+let mySprite4 = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . f . . . . 
+    . . . . . . . . . . . . f . . . 
+    . . . 9 9 e e c c d a 5 b f . . 
+    . . . . . . . . . . . . f . . . 
+    . . . . . . . . . . . f . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -194,5 +212,9 @@ game.onUpdate(function () {
 })
 game.onUpdate(function () {
     time = game.runtime() / 10000
-    mySprite2.x = screen.width / 2 + cx * Math.cos(rate * time)
+    mySprite4.x = screen.width / 2 + cx * Math.tan(rate * time)
+})
+game.onUpdate(function () {
+    time = game.runtime() / 10000
+    mySprite2.y = screen.width / 2 + cx * Math.sin(rate * time)
 })
